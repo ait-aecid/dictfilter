@@ -2,7 +2,7 @@ def _filter(data, fields):
     out = {}
 
     for field in fields:
-        key, *rest = field.split('.', maxsplit=1)
+        key, *rest = field.split('@@@', maxsplit=1)
 
         if key not in data:
             # TODO: maybe add a 'strict' option to raise an exception here.
